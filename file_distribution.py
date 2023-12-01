@@ -9,7 +9,7 @@ def count_file_types(directory):
         for file in files:
             file_path = os.path.join(root, file)
             long_file_path = f"\\\\?\\{file_path}"  # Handling long file paths on Windows
-            file_type = os.path.splitext(file)[1]
+            file_type = os.path.splitext(file)[1].lower()  # Convert file type to lowercase
 
             if file_type and os.path.exists(long_file_path):  # Check if file exists
                 file_size = os.path.getsize(long_file_path)
