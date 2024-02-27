@@ -6,7 +6,7 @@ import openai
 import glob
 import time
 
-openai_api_key = "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"
+openai_api_key = "sk-XXX"
 openai_client = openai.OpenAI(api_key=openai_api_key)
 
 # Specify the directory for PDF files and output file
